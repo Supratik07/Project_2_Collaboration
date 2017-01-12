@@ -1,0 +1,5 @@
+com\niit\restexample\backend\dao\UserDAO.class
+com\niit\restexample\backend\model\User.class
+com\niit\restexample\backend\dao\UserDAOImpl.class
+com\niit\restexample\backend\config\AppContextConfig.class
+com\niit\restexample\backend\App.class

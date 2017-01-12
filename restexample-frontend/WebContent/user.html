@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="userApp" ng-controller="userCtrl" ng-init="refreshUser()">
+	
+	
+	
+	<table>
+		<thead>
+			<tr>
+				<th>User ID</th>
+				<th>Username</th>
+				<th>Role</th>
+				<th>City</th>
+				<th>Mobile</th>
+				
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="user in users">
+
+				<td>{{user.userId}}</td>
+				<td>{{user.username}}</td>
+				<td>{{user.role}}</td>
+				<td>{{user.city}}</td>
+				<td>{{user.mobile}}</td>
+				<td><a href="" ng-click="deleteUser(user.username)">Delete</a></td>
+
+			</tr>
+
+
+		</tbody>
+
+
+	</table>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+<script type="text/javascript" src="js/usercontroller.js"></script>
+
+</body>
+</html>
