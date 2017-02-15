@@ -1,0 +1,3 @@
+com\niit\angularauth\rest\controller\UserRestController.class
+com\niit\angularauth\rest\config\WebAppInitializer.class
+com\niit\angularauth\rest\config\WebConfig.class
