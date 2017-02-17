@@ -1,0 +1,15 @@
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+{{vm.user.firstName}}<input type="submit" value="Create Blog" class="btn btn-warning btn-sm" >
+<h3>All registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+    <form action="/createblog"">
+       {{user.userId}} {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="vm.deleteUser(user.userId)">Delete</a>
+        <input type="submit" value="Create Blog" class="btn btn-warning btn-sm" >
+    </li>
+    </form>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
