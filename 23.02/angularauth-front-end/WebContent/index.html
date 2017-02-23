@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS User Registration and Login Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.0/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Facebook</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+	  <li><a href="#!/listblog">Blogs</a></li>
+	  <li><a href="#!/jobdetails">Jobs</a></li>
+      
+      </li>
+      <li><a href="#">About Us</a></li> 
+	  <li><a href="#">Contact Us</a></li>
+	  
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#!/register"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
+      <li><a href="#!/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="#!/login"><p ng-hide="false"> Logout</p></a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+	  <li><a href="#"><input type="text" class="form-control" id="pwd" placeholder="search here"></a></li>
+	  <li><a href="#"> <button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button></a></li>
+	
+	  </ul>
+
+  </div>
+
+  </div>
+</nav>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Facebook<i class="fa fa-copyright" aria-hidden="true">2017</i></span></a>
+	 
+
+	  
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+	
+      
+      <li class='active'><a href="#"><span class="glyphicon-facebook"></span><i class="fa fa-facebook" aria-hidden="true"></i> Like us on Facebook</a></li>
+      <li><a href="#"><span class="glyphicon-twitter"></span><i class="fa fa-twitter" aria-hidden="true"></i>Follow us at twitter</a></li>
+	  <li><a href="#"><span class="glyphicon-instagram"></span><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+	  <li><a href="#"><span class="glyphicon-rssfeed"></span><i class="fa fa-rss" aria-hidden="true"></i></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+    <script src="app.js"></script>
+    <script src="app-services/authentication.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+
+    <!-- Real user service that uses an api -->
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/blog.service.js"></script>
+    <script src="app-services/job.service.js"></script>
+    <script src="app-services/friend.service.js"></script>
+    <script src="app-services/chat.service.js"></script>
+
+    <!-- Fake user service for demo that uses local storage -->
+    <!-- <script src="app-services/user.service.local-storage.js"></script> -->
+
+    <script src="home/home.controller.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="register/register.controller.js"></script>
+    <script src="blog/blog.controller.js"></script>
+    <script src="job/job.controller.js"></script>
+    <script src="friend/friend.controller.js"></script>
+    <script src="chat/chat.controller.js"></script>
+</body>
+</html>

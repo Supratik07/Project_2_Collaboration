@@ -1,0 +1,6 @@
+<h3>View All Registered Users</h3>
+<li ng-repeat="user in vm.allUsers">
+{{user.userId}} {{user.username}} ({{user.firstName}} {{user.lastName}})
+<a ng-hide="user.role=='admin'" ng-click="vm.makeAdmin()">
+</a>
+</li>
