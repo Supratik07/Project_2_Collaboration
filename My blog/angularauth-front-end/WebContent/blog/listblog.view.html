@@ -1,0 +1,15 @@
+<div class="container">
+<h4 align="center">Welcome to Blogs</h4>
+<div ng-repeat="blog in vm.allBlogs">
+<table class="table table-striped" >
+<tbody>
+<tr>
+<td><a href ng-click="vm.getBlog(blog.blogId)">Title {{blog.title}} - Written By: {{blog.user.username }}</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<!-- "#!/viewblog" -->

@@ -1,0 +1,38 @@
+<div>
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">
+<div>
+You are not logged in...Please login<a href="#/login">here</a> to create a blog 
+</div>
+<div>If you are not at Register,you can register<a href="#/register">here</a>
+</div>
+</div>
+</div>
+{{vm.user.firstName}}
+<div ng-hide="currentUser==''">
+<div class="generic-container">
+<form class="form-horizontal" name="myForm">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="title">Blog Title:</label>
+      <div class="col-sm-10">
+        <input type="text" ng-model="blog.title" id="title">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="blogtext">Please fill the blog details:</label>
+      <div class="col-sm-10">          
+        <textarea id="blogtext" ng-model="blog.description" rows="30" cols="50" required ng-minlength="1"
+ng-maxlength="500"></textarea>
+      </div>
+    </div>
+  
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" value="Create Blog" class="btn btn-warning btn-sm" ng-click="vm.submit(blog)">
+		<button type="button" ng-click="vm.reset(blog)" class="btn btn-warning btn-sm">Reset Blog</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+</div>
