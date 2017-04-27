@@ -1,0 +1,49 @@
+
+<html ng-app="myApp">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- <link
+	href='http://fonts.googleapis.com/css?family=Raleway:400,700|Merriweather'
+	rel='stylesheet' type='text/css'> -->
+<style>
+body {
+	width: 100%;
+	height: 100%;
+	background:cover ;
+}
+</style>
+<body background="http://www.z-in.co.kr/upload/product/6523_image_medium_name_20130218103461417.jpg">
+	<div ng-include="'c_resource/header.html'+ '?updated=' + updateTime">
+	</div>
+	<br>
+	<br>
+
+	<div ng-view></div>
+	<script src="c_resource/jquery.min.js"></script>
+	<script src="c_resource/sockjs.min.js"></script>
+	<script src="c_resource/stomp.min.js"></script>
+	<script src="c_resource/angular.min.js"></script>
+	<script src="c_resource/angular-cookies.js"></script>
+	<script src="c_resource/angular-route.js"></script>
+	
+	<script src="c_resource/bootstrap.min.js"></script>
+	<script src="c_resource/bootstrap-tpls.min.js"></script>
+	
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	<script src="c_home/app.js"></script>
+	<script src="c_user/userCtrl.js"></script>
+	<script src="c_user/user_service.js"></script>
+	<script src="c_blog/blogCtrl.js"></script>
+	<script src="c_blog/blog_service.js"></script>
+	<script src="c_job/jobCtrl.js"></script>
+	<script src="c_job/job_service.js"></script>
+	<script src="c_friend/FriendCtrl.js"></script>
+	<script src="c_friend/friend_service.js"></script>
+	<script src="c_chat/ChatCtrl.js"></script>
+	<script src="c_chat/ChatService.js"></script>
+	<script src="c_chat/pChatService.js"></script>
+	<script src="c_chat/pChatCtrl.js"></script>
+	
+</body>
+</html>
