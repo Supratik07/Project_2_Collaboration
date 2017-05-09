@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css'>
+	
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div class="wrapper" ng-controller="UserController as ctrl">
+		<h1 align='center'>Register For An Account</h1>
+		<p></p>
+		<form class="form" ng-submit="ctrl.submit()" name="myForm" align='center'>
+		<h1>Choose a Role</h1>
+		<input type="radio" ng-model="ctrl.user.role" value="Employee">Employee
+		<input type="radio" ng-model="ctrl.user.role" value="Student">Student
+		<input type="radio" ng-model="ctrl.user.role" value="Alumni">Others<br>
+		<input type="text" class="name" placeholder="username" ng-model="ctrl.user.id"/>
+			<div>
+				<p class="name-help"></p>
+			</div>
+			<input type="text" ng-model="ctrl.user.name" id="name" class="uname" placeholder="Name"/>
+			<div>
+				<p class="uname-help"></p>
+			</div>
+			<input type="email" ng-model="ctrl.user.email" id="email" class="email" placeholder="Email"/>
+			<div>
+				<p class="email-help"></p>
+			</div>
+			<input type="password" ng-model="ctrl.user.password" id="password" class="pass" placeholder="Password">
+			<div>
+				<p class="pass-help"></p>
+			</div>
+			<input type="text" ng-model="ctrl.user.address" id="address" class="add" placeholder="Address"/>
+			<div>
+				<p class="add-help"></p>
+			</div>
+			<input type="text" ng-model="ctrl.user.mobile" id="mobile" class="mob" placeholder="Mobile">
+			<div>
+				<p class="mob-help"></p>
+			</div>
+			
+			<input type="submit" class="submit" value="{{ctrl.user.id ? 'Register' : 'Start Registering'}}" ng-disabled="myForm.$invalid">
+		</form>
+	</div>
+	<script>
+		$(".name").focus(function() {
+			$(".name-help").slideDown(500);
+		}).blur(function() {
+			$(".name-help").slideUp(500);
+		});
+
+		$(".uname").focus(function() {
+			$(".uname-help").slideDown(500);
+		}).blur(function() {
+			$(".uname-help").slideUp(500);
+		});
+
+		$(".pass").focus(function() {
+			$(".pass-help").slideDown(500);
+		}).blur(function() {
+			$(".pass-help").slideUp(500);
+		});
+		$(".add").focus(function() {
+			$(".add-help").slideDown(500);
+		}).blur(function() {
+			$(".add-help").slideUp(500);
+		});
+
+		$(".mob").focus(function() {
+			$(".mob-help").slideDown(500);
+		}).blur(function() {
+			$(".mob-help").slideUp(500);
+		});
+		$(".stat").focus(function() {
+			$(".stat-help").slideDown(500);
+		}).blur(function() {
+			$(".stat-help").slideUp(500);
+		});
+
+		$(".online").focus(function() {
+			$(".online-help").slideDown(500);
+		}).blur(function() {
+			$(".online-help").slideUp(500);
+		});
+
+		$(".role").focus(function() {
+			$(".role-help").slideDown(500);
+		}).blur(function() {
+			$(".role-help").slideUp(500);
+		});
+
+		$(".email").focus(function() {
+			$(".email-help").slideDown(500);
+		}).blur(function() {
+			$(".email-help").slideUp(500);
+		});
+	</script>
+</body>
+</html>

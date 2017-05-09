@@ -1,0 +1,14 @@
+/*UserDAO userDAO=(UserDAO) context.getBean("userDAO");
+		User user=(User) context.getBean("user");
+		
+		user.setId("sou1");
+		user.setName("Sourav");
+		user.setEmail("souravictory@gmail.com");
+		user.setPassword("sourav123");
+		user.setMobile("9051249493");
+		user.setReason("");
+		user.setRole("ADMIN");
+		user.setStatus('1');
+		user.setIs_online('Y');
+		user.setAddress("Birati");
+		userDAO.save(user);*/
